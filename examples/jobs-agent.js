@@ -684,12 +684,14 @@ function jobsAgent(args) {
       installedPackages = [];
    }
 
+   /* we do autostart after install only, NOT after every iot agent start!
    for (var i = 0; i < installedPackages.length; i++) {
       if (!isUndefined(installedPackages[i].launchCommand) && 
           (isUndefined(installedPackages[i].autoStart) || installedPackages[i].autoStart)) {
          startPackage(installedPackages[i], console.error);
       }
    }
+   */
 }
 
 module.exports = cmdLineProcess;
